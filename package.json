@@ -4,10 +4,10 @@
   "description": "The API for the Bingle app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specifiedd\" && exit 1",
-    "lint": "eslint .",
-    "format": "prettier --write .",
-    "validate-packages-file": "jsonlint package.json"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . && echo '✓ ESLint check passed.' || (echo ✗ ESLint failed. && exit 1)",
+    "format": "prettier --write . && echo '✓ Code formatted successfully.' || (echo ✗ Format failed. && exit 1)",
+    "validate-packages-file": "jsonlint package.json && echo '✓ JSON check passed.' || (echo ✗ Jsonlint failed. && exit 1)"
   },
   "pre-commit": [
     "lint",
