@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . && echo '✓ ESLint check passed.' || (echo ✗ ESLint failed. && exit 1)",
-    "format": "prettier --write . --loglevel error && echo '✓ Code formatted successfully.' || (echo ✗ Format failed. && exit 1)",
+    "format": "prettier --write . --log-level error && echo '✓ Code formatted successfully.' || (echo ✗ Format failed. && exit 1)",
     "validate-packages-file": "jsonlint package.json > /dev/null && echo '✓ JSON check passed.' || (echo ✗ Jsonlint failed. && exit 1)"
   },
   "pre-commit": [
