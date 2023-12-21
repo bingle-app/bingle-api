@@ -6,16 +6,16 @@ This is the API for the Bingle app.
 
 ## Project structure
 
-```markdown
-├── app
-│ ├── module
-│ │ ├── controllers.js
-│ │ ├── models.js
-│ │ ├── routes.js
-│ │ ├── services.js
-│ ├── models
-│ │ ├── model
-│ ├── index.js
+``` markdown
+├── app 
+│   ├── module
+│   │   ├── controllers.js
+│   │   ├── models.js
+│   │   ├── routes.js
+│   │   ├── services.js
+│   ├── models
+│   │   ├── model
+│   ├── index.js
 └── server.js
 ```
 
