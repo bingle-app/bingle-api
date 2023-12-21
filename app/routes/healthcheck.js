@@ -1,4 +1,4 @@
-const controllers = require('../controllers/healthcheck');
+const controllers = require('../controllers/healthcheck').default;
 const express = require('express');
 
 const router = express.Router();
