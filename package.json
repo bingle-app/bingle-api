@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . && echo '✓ ESLint check passed.' || (echo ✗ ESLint failed. && exit 1)",
-    "format": "prettier --write . && echo '✓ Code formatted successfully.' || (echo ✗ Format failed. && exit 1)",
-    "validate-packages-file": "jsonlint package.json && echo '✓ JSON check passed.' || (echo ✗ Jsonlint failed. && exit 1)"
+    "format": "prettier --write . --loglevel error && echo '✓ Code formatted successfully.' || (echo ✗ Format failed. && exit 1)",
+    "validate-packages-file": "jsonlint package.json > /dev/null && echo '✓ JSON check passed.' || (echo ✗ Jsonlint failed. && exit 1)"
   },
   "pre-commit": [
     "lint",
@@ -26,6 +26,6 @@
     "jsonlint": "^1.6.3",
     "nodemon": "^3.0.2",
     "pre-commit": "^1.2.2",
-    "prettier": '^3.1.1'
+    "prettier": "^3.1.1"
   }
 }
