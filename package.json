@@ -4,7 +4,7 @@
   "description": "The API for the Bingle app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specifiedd\" && exit 1",
     "lint": "eslint .",
     "format": "prettier --write .",
     "validate-packages-file": "jsonlint package.json"
