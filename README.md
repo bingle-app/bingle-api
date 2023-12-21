@@ -7,7 +7,7 @@ This is the API for the Bingle app.
 ## Project structure
 
 ``` markdown
-├── app
+├── app 
 │   ├── module
 │   │   ├── controllers.js
 │   │   ├── models.js
