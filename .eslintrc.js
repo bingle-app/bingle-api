@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   extends: ['eslint:recommended', 'plugin:prettier/recommended'],
   env: {
     browser: true,
