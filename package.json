@@ -6,15 +6,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . && echo '✓ ESLint check passed.' || (echo ✗ ESLint failed. && exit 1)",
-    "format": "prettier --write . --log-level error && echo '✓ Code formatted successfully.' || (echo ✗ Format failed. && exit 1)",
-    "validate-packages-file": "jsonlint package.json > /dev/null && echo '✓ JSON check passed.' || (echo ✗ Jsonlint failed. && exit 1)"
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
-  "pre-commit": [
-    "lint",
-    "format",
-    "validate-packages-file"
-  ],
   "dependencies": {
     "body-parser": "^1.20.2",
     "express": "^4.18.2"
@@ -23,10 +17,8 @@
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.1",
-    "husky": "^8.0.3",
     "jsonlint": "^1.6.3",
     "nodemon": "^3.0.2",
-    "pre-commit": "^1.2.2",
     "prettier": "^3.1.1"
   }
 }
