@@ -21,7 +21,7 @@ jobs:
         id: setup
         run: |
           echo "::set-output name=workspace::${GITHUB_WORKSPACE}"
-          zip -r node_modules.zip node_modules
+          zip -r -9 -q node_modules.zip node_modules
 
       - name: Upload node_modules artifact
         uses: actions/upload-artifact@v2
@@ -37,8 +37,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: node_modules
+          path: ${{ needs.setup.outputs.workspace }}
       - name: Lint project
-        run: npm run lint
+        run: |
+          cd ${{ needs.setup.outputs.workspace }}
+          npm run lint
 
   check-format:
     runs-on: ubuntu-latest
@@ -48,8 +51,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: node_modules
+          path: ${{ needs.setup.outputs.workspace }}
       - name: Check format
-        run: npm run check-format
+        run: |
+          cd ${{ needs.setup.outputs.workspace }}
+          npm run check-format
 
   run-tests:
     runs-on: ubuntu-latest
@@ -59,5 +65,8 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: node_modules
+          path: ${{ needs.setup.outputs.workspace }}
       - name: Run tests
-        run: npm test
+        run: |
+          cd ${{ needs.setup.outputs.workspace }}
+          npm test
