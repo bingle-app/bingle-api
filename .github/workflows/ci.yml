@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install project dependencies
-        run: npm install
+        run: npm install --only=dev
 
       - name: Lint project
         run: npm run lint
@@ -40,7 +40,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install project dependencies
-        run: npm install
+        run: npm install --only=dev
 
       - name: Check format
         run: npm run check-format
