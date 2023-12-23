@@ -1,0 +1,27 @@
+name: Bingle API CI pipeline
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 21.5.0
+
+      - name: Install project dependencies
+        run: npm install
+
+      - name: Lint project
+        run: npm run lint
+
+      - name: Check format
+        run: npm run check-format
+
+      - name: Run tests
+        run: npm test
