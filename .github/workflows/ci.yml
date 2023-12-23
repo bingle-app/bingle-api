@@ -1,6 +1,6 @@
 name: Bingle API CI pipeline
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   build:
