@@ -27,7 +27,7 @@ jobs:
         run: npm run check-format
   run-tests:
     runs-on: ubuntu-latest
-    needs: setup
+    needs: [lint, check-format]
     steps:
       - name: Run tests
         run: npm test
